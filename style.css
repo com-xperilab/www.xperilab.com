@@ -1,0 +1,89 @@
+:root {
+  color-scheme: light dark;
+  --ground: #FBFAF8;
+  --ink:    #16181C;
+  --muted:  #6B7178;
+  --rule:   #E2E0DB;
+  --link:   #2F5D8C;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #111315;
+    --ink:    #E9E9E6;
+    --muted:  #94999F;
+    --rule:   #2A2D31;
+    --link:   #7FAEDC;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 32px 24px;
+}
+
+/* The landing page is a single centred block. */
+body.landing { display: grid; place-items: center; }
+body.landing main { max-width: 30rem; text-align: center; }
+
+/* Policy and support pages read as documents. */
+body.doc { display: block; }
+body.doc main { max-width: 34rem; margin: 0 auto; padding: 24px 0 8px; }
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+body.doc h2 {
+  margin: 2.25rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+body.doc p, body.doc li { margin: 0.75rem 0; }
+body.doc ul { padding-left: 1.25rem; }
+body.doc li { margin: 0.5rem 0; }
+
+.lede { margin-top: 1rem; color: var(--muted); }
+
+.contact {
+  margin: 1.75rem 0 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--link) 35%, transparent);
+  padding-bottom: 1px;
+}
+a:hover { border-bottom-color: var(--link); }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+
+.copyright, .updated {
+  margin: 2.5rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+.updated { margin: 0.5rem 0 0; }
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}

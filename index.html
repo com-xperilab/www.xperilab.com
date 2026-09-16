@@ -6,83 +6,16 @@
 <title>Xperilab, LLC</title>
 <meta name="description" content="Xperilab, LLC">
 <link rel="icon" href="data:,">
-<style>
-  :root {
-    color-scheme: light dark;
-    --ground: #FBFAF8;
-    --ink:    #16181C;
-    --muted:  #6B7178;
-    --rule:   #E2E0DB;
-    --link:   #2F5D8C;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ground: #111315;
-      --ink:    #E9E9E6;
-      --muted:  #94999F;
-      --rule:   #2A2D31;
-      --link:   #7FAEDC;
-    }
-  }
-
-  * { box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    margin: 0;
-    background: var(--ground);
-    color: var(--ink);
-    font: 400 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    display: grid;
-    place-items: center;
-    padding: 32px 24px;
-  }
-
-  main {
-    width: 100%;
-    max-width: 30rem;
-    text-align: center;
-  }
-
-  h1 {
-    margin: 0;
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    font-weight: 600;
-    letter-spacing: 0.01em;
-  }
-
-  .contact {
-    margin: 1.75rem 0 0;
-    padding-top: 1.75rem;
-    border-top: 1px solid var(--rule);
-  }
-
-  a {
-    color: var(--link);
-    text-decoration: none;
-    border-bottom: 1px solid color-mix(in srgb, var(--link) 35%, transparent);
-    padding-bottom: 1px;
-  }
-  a:hover { border-bottom-color: var(--link); }
-  a:focus-visible {
-    outline: 2px solid var(--link);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  .copyright {
-    margin: 2.5rem 0 0;
-    font-size: 0.8125rem;
-    color: var(--muted);
-  }
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="landing">
   <main>
     <h1>Xperilab, LLC</h1>
     <p class="contact"><a href="mailto:support@xperilab.com">support@xperilab.com</a></p>
-    <p class="copyright">&copy; 2026 Xperilab, LLC. All rights reserved.</p>
+    <p class="copyright">
+      &copy; 2026 Xperilab, LLC. All rights reserved.<br>
+      <a href="/privacy/">Privacy</a> &middot; <a href="/support/">Support</a>
+    </p>
   </main>
 </body>
 </html>
